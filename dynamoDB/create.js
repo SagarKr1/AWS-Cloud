@@ -17,7 +17,7 @@ exports.handler = async (event) => {
                 "address":event['address']
             }
         }
-        await dynamodb.put(params).promise();
+        await dynamodb.put(params).promise(); //PUT is used for inserting data on dynamodb
         return{
             statusCode:200,
             body:"Data Create successfully"
