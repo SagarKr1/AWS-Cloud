@@ -8,7 +8,7 @@ exports.handler = async (event) => {
             TableName: 'TableName',
             IndexName: 'Pk-tstamp-index',//your partition key
             KeyConditionExpression: 'Pk = :no AND tstamp <= :st',
-            FilterExpression: "(begins_with(#name,:val))",
+            // FilterExpression: "(begins_with(#name,:val))",
             // ExpressionAttributeNames: {
             //     '#name': 'name'
             // },
