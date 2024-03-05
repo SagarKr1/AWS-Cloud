@@ -13,7 +13,7 @@ exports.handler = async (event) => {
                 ':no': "1",
                 ':st': Number(Date.now()),
             },
-            ProjectionExpression: "name,email,phone_number",         //sends only id, project_name, thumb_image, address
+            ProjectionExpression: "name,email,phone_number",//send that data only which you want to show        
             ExclusiveStartKey: exclusiveStartKey,
             Limit: event['limit'],
             ScanIndexForward: false,
@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
         let data = await dynamodb.query(params).promise();
         console.log(data);
-        
+
         return {
             statusCode: 200,
             body: data,
