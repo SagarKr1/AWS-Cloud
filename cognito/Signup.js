@@ -3,7 +3,7 @@ let cognito = new AWS.CognitoIdentityServiceProvider();
 
 
 
-let clientID = 'Clinet-ID';
+let clientID = 'Client-ID';
 exports.handler = async (event) => {
     try {
         const cognitoCall = await cognitoRegister(event);
